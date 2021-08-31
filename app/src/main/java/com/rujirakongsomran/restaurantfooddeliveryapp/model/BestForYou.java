@@ -5,15 +5,17 @@ public class BestForYou {
     private Integer rating;
     private String time;
     private String price;
+    private Integer imageUrl;
 
     public BestForYou() {
     }
 
-    public BestForYou(String name, Integer rating, String time, String price) {
+    public BestForYou(String name, Integer rating, String time, String price, Integer imageUrl) {
         this.name = name;
         this.rating = rating;
         this.time = time;
         this.price = price;
+        this.imageUrl = imageUrl;
     }
 
     public String getName() {
@@ -46,5 +48,13 @@ public class BestForYou {
 
     public void setPrice(String price) {
         this.price = price;
+    }
+
+    public Integer getImageUrl() {
+        return imageUrl;
+    }
+
+    public void setImageUrl(Integer imageUrl) {
+        this.imageUrl = imageUrl;
     }
 }
