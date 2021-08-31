@@ -45,6 +45,24 @@ public class MainActivity extends AppCompatActivity {
                 "55 min",
                 "$50",
                 R.drawable.bestforyou3));
+        bestForYouList.add(new BestForYou(
+                "Pasta",
+                "3.2",
+                "30 min",
+                "$10",
+                R.drawable.bestforyou1));
+        bestForYouList.add(new BestForYou(
+                "Biryani",
+                "4.2",
+                "40 min",
+                "$30",
+                R.drawable.bestforyou2));
+        bestForYouList.add(new BestForYou(
+                "Singapore Rice",
+                "4.2",
+                "55 min",
+                "$50",
+                R.drawable.bestforyou3));
 
         setBestForYouRecyclerView(bestForYouList);
 
