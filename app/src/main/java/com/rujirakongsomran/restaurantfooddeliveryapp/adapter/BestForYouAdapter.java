@@ -55,9 +55,9 @@ public class BestForYouAdapter extends RecyclerView.Adapter<BestForYouAdapter.Be
         public BestForYouViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            ivItemImage = itemView.findViewById(R.id.ivItemImage);
-            tvItemName = itemView.findViewById(R.id.tvItemName);
-            tvItemPrice = itemView.findViewById(R.id.tvItemPrice);
+            ivItemImage = itemView.findViewById(R.id.ivNearByItemImage);
+            tvItemName = itemView.findViewById(R.id.tvNearByItemName);
+            tvItemPrice = itemView.findViewById(R.id.tvNearByItemPrice);
             tvItemTime = itemView.findViewById(R.id.tvItemTime);
             ratingBar = itemView.findViewById(R.id.ratingBar);
         }
