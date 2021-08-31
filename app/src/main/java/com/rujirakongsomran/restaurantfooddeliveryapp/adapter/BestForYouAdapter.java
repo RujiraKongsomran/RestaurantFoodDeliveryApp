@@ -38,7 +38,7 @@ public class BestForYouAdapter extends RecyclerView.Adapter<BestForYouAdapter.Be
         holder.tvItemName.setText(bestForYouList.get(position).getName());
         holder.tvItemTime.setText(bestForYouList.get(position).getTime());
         holder.tvItemPrice.setText(bestForYouList.get(position).getPrice());
-        holder.ratingBar.setRating(bestForYouList.get(position).getRating());
+        holder.ratingBar.setRating(Float.parseFloat(bestForYouList.get(position).getRating()));
     }
 
     @Override

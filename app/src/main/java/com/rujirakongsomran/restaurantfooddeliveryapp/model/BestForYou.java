@@ -2,7 +2,7 @@ package com.rujirakongsomran.restaurantfooddeliveryapp.model;
 
 public class BestForYou {
     private String name;
-    private Integer rating;
+    private String rating;
     private String time;
     private String price;
     private Integer imageUrl;
@@ -10,7 +10,7 @@ public class BestForYou {
     public BestForYou() {
     }
 
-    public BestForYou(String name, Integer rating, String time, String price, Integer imageUrl) {
+    public BestForYou(String name, String rating, String time, String price, Integer imageUrl) {
         this.name = name;
         this.rating = rating;
         this.time = time;
@@ -26,11 +26,11 @@ public class BestForYou {
         this.name = name;
     }
 
-    public Integer getRating() {
+    public String getRating() {
         return rating;
     }
 
-    public void setRating(Integer rating) {
+    public void setRating(String rating) {
         this.rating = rating;
     }
 
