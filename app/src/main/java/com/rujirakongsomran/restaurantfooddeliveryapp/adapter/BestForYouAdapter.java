@@ -12,6 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.rujirakongsomran.restaurantfooddeliveryapp.R;
+import com.rujirakongsomran.restaurantfooddeliveryapp.databinding.BestForYouRowItemBinding;
 import com.rujirakongsomran.restaurantfooddeliveryapp.model.BestForYou;
 
 import java.util.List;
@@ -29,16 +30,17 @@ public class BestForYouAdapter extends RecyclerView.Adapter<BestForYouAdapter.Be
     @NonNull
     @Override
     public BestForYouViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return new BestForYouViewHolder(LayoutInflater.from(context).inflate(R.layout.best_for_you_row_item, parent, false));
+        return new BestForYouViewHolder(BestForYouRowItemBinding.inflate(LayoutInflater.from(parent.getContext()),
+                parent, false));
     }
 
     @Override
     public void onBindViewHolder(@NonNull BestForYouViewHolder holder, int position) {
-        holder.ivItemImage.setImageResource(bestForYouList.get(position).getImageUrl());
-        holder.tvItemName.setText(bestForYouList.get(position).getName());
-        holder.tvItemTime.setText(bestForYouList.get(position).getTime());
-        holder.tvItemPrice.setText(bestForYouList.get(position).getPrice());
-        holder.ratingBar.setRating(Float.parseFloat(bestForYouList.get(position).getRating()));
+        holder.binding.ivItemImage.setImageResource(bestForYouList.get(position).getImageUrl());
+        holder.binding.tvItemName.setText(bestForYouList.get(position).getName());
+        holder.binding.tvItemTime.setText(bestForYouList.get(position).getTime());
+        holder.binding.tvItemPrice.setText(bestForYouList.get(position).getPrice());
+        holder.binding.ratingBar.setRating(Float.parseFloat(bestForYouList.get(position).getRating()));
     }
 
     @Override
@@ -48,18 +50,11 @@ public class BestForYouAdapter extends RecyclerView.Adapter<BestForYouAdapter.Be
 
     public static final class BestForYouViewHolder extends RecyclerView.ViewHolder {
 
-        ImageView ivItemImage;
-        TextView tvItemName, tvItemPrice, tvItemTime;
-        RatingBar ratingBar;
+        BestForYouRowItemBinding binding;
 
-        public BestForYouViewHolder(@NonNull View itemView) {
-            super(itemView);
-
-            ivItemImage = itemView.findViewById(R.id.ivNearByItemImage);
-            tvItemName = itemView.findViewById(R.id.tvNearByItemName);
-            tvItemPrice = itemView.findViewById(R.id.tvNearByItemPrice);
-            tvItemTime = itemView.findViewById(R.id.tvItemTime);
-            ratingBar = itemView.findViewById(R.id.ratingBar);
+        public BestForYouViewHolder(@NonNull BestForYouRowItemBinding binding) {
+            super(binding.getRoot());
+            this.binding = binding;
         }
     }
 }

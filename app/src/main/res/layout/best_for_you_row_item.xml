@@ -7,7 +7,7 @@
     android:layout_marginEnd="8dp">
 
     <ImageView
-        android:id="@+id/ivNearByItemImage"
+        android:id="@+id/ivItemImage"
         android:layout_width="194dp"
         android:layout_height="162dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -16,7 +16,7 @@
         app:srcCompat="@drawable/bestforyou1" />
 
     <TextView
-        android:id="@+id/tvNearByItemName"
+        android:id="@+id/tvItemName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -26,7 +26,7 @@
         android:textColor="#3A3A3A"
         android:textSize="18dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ivNearByItemImage" />
+        app:layout_constraintTop_toBottomOf="@+id/ivItemImage" />
 
     <TextView
         android:id="@+id/tvItemTime"
@@ -34,20 +34,20 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
         android:text="40 min"
-        app:layout_constraintBottom_toBottomOf="@+id/tvNearByItemName"
+        app:layout_constraintBottom_toBottomOf="@+id/tvItemName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/tvNearByItemName" />
+        app:layout_constraintTop_toTopOf="@+id/tvItemName" />
 
     <RatingBar
         android:id="@+id/ratingBar"
         style="@style/Widget.AppCompat.RatingBar.Small"
         android:layout_width="93dp"
         android:layout_height="16dp"
-        app:layout_constraintStart_toStartOf="@+id/tvNearByItemName"
-        app:layout_constraintTop_toBottomOf="@+id/tvNearByItemName" />
+        app:layout_constraintStart_toStartOf="@+id/tvItemName"
+        app:layout_constraintTop_toBottomOf="@+id/tvItemName" />
 
     <TextView
-        android:id="@+id/tvNearByItemPrice"
+        android:id="@+id/tvItemPrice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -64,7 +64,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        app:layout_constraintBottom_toBottomOf="@+id/tvNearByItemPrice"
+        app:layout_constraintBottom_toBottomOf="@+id/tvItemPrice"
         app:layout_constraintEnd_toEndOf="@+id/tvItemTime"
         app:layout_constraintTop_toBottomOf="@+id/tvItemTime"
         app:srcCompat="@drawable/ic_cart" />

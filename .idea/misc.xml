@@ -3,12 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Project Mobile/RestaurantFoodDeliveryApp/app/src/main/res/drawable/button_bg.xml" value="0.26974358974358975" />
         <entry key="..\:/Project Mobile/RestaurantFoodDeliveryApp/app/src/main/res/drawable/ic_cart.xml" value="0.12777777777777777" />
         <entry key="..\:/Project Mobile/RestaurantFoodDeliveryApp/app/src/main/res/drawable/ic_menu.xml" value="0.12777777777777777" />
         <entry key="..\:/Project Mobile/RestaurantFoodDeliveryApp/app/src/main/res/layout/activity_intro_page.xml" value="0.25" />
         <entry key="..\:/Project Mobile/RestaurantFoodDeliveryApp/app/src/main/res/layout/activity_main.xml" value="0.33" />
-        <entry key="..\:/Project Mobile/RestaurantFoodDeliveryApp/app/src/main/res/layout/best_for_you_row_item.xml" value="0.5" />
-        <entry key="..\:/Project Mobile/RestaurantFoodDeliveryApp/app/src/main/res/layout/near_by_row_item.xml" value="0.5" />
+        <entry key="..\:/Project Mobile/RestaurantFoodDeliveryApp/app/src/main/res/layout/best_for_you_row_item.xml" value="0.35384615384615387" />
+        <entry key="..\:/Project Mobile/RestaurantFoodDeliveryApp/app/src/main/res/layout/near_by_row_item.xml" value="0.22" />
       </map>
     </option>
   </component>
