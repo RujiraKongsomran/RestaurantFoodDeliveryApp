@@ -11,6 +11,8 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.rujirakongsomran.restaurantfooddeliveryapp.R;
+import com.rujirakongsomran.restaurantfooddeliveryapp.databinding.BestForYouRowItemBinding;
+import com.rujirakongsomran.restaurantfooddeliveryapp.databinding.NearByRowItemBinding;
 import com.rujirakongsomran.restaurantfooddeliveryapp.model.NearBy;
 
 import java.util.List;
@@ -28,14 +30,15 @@ public class NearbyAdapter extends RecyclerView.Adapter<NearbyAdapter.NearbyView
     @NonNull
     @Override
     public NearbyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return new NearbyViewHolder(LayoutInflater.from(context).inflate(R.layout.near_by_row_item, parent, false));
+        return new NearbyViewHolder(NearByRowItemBinding.inflate(LayoutInflater.from(parent.getContext()),
+                parent, false));
     }
 
     @Override
     public void onBindViewHolder(@NonNull NearbyViewHolder holder, int position) {
-        holder.ivNearByItemImage.setImageResource(nearByList.get(position).getImageUrl());
-        holder.tvNearByItemName.setText(nearByList.get(position).getName());
-        holder.tvNearByItemPrice.setText(nearByList.get(position).getTime());
+        holder.binding.ivNearByItemImage.setImageResource(nearByList.get(position).getImageUrl());
+        holder.binding.tvNearByItemName.setText(nearByList.get(position).getName());
+        holder.binding.tvNearByItemPrice.setText(nearByList.get(position).getTime());
     }
 
     @Override
@@ -45,15 +48,11 @@ public class NearbyAdapter extends RecyclerView.Adapter<NearbyAdapter.NearbyView
 
     public static final class NearbyViewHolder extends RecyclerView.ViewHolder {
 
-        ImageView ivNearByItemImage;
-        TextView tvNearByItemName, tvNearByItemPrice;
+        NearByRowItemBinding binding;
 
-        public NearbyViewHolder(@NonNull View itemView) {
-            super(itemView);
-
-            ivNearByItemImage = itemView.findViewById(R.id.ivNearByItemImage);
-            tvNearByItemName = itemView.findViewById(R.id.tvNearByItemName);
-            tvNearByItemPrice = itemView.findViewById(R.id.tvNearByItemPrice);
+        public NearbyViewHolder(@NonNull NearByRowItemBinding binding) {
+            super(binding.getRoot());
+            this.binding = binding;
         }
     }
 }
